@@ -1,0 +1,15 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  user_id: 1
+  table_id: 1
+  numbers_people: 1
+  status: false
+  datetime: 2019-05-20 16:13:14
+
+two:
+  user_id: 1
+  table_id: 1
+  numbers_people: 1
+  status: false
+  datetime: 2019-05-20 16:13:14
