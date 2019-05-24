@@ -23,6 +23,12 @@ gem 'carrierwave', '1.2.2'
 gem 'mini_magick', '4.7.0'
 gem 'will_paginate', '3.1.6'
 gem 'bootstrap-will_paginate', '1.0.0'
+gem 'font-awesome-sass', '~>4.2.0'
+gem 'lightbox2-rails', '~> 2.8'
+gem 'hamburgers', '~> 1.1', '>= 1.1.3'
+gem 'slick_rails', '~> 1.5', '>= 1.5.9'
+gem 'animate-scss', '~> 0.0.5'
+gem 'select2-rails', '~> 4.0', '>= 4.0.3'
 
 group :development, :test do
   gem 'byebug', platforms: [:mri, :mingw, :x64_mingw]
