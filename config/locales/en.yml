@@ -31,3 +31,61 @@
 
 en:
   hello: "Hello world"
+  users:
+    form:
+      pato_restaurant: "Pato Restaurant"
+    edit:
+      change_profile: "Change your profile"
+      save_change: "Save changes"
+    index:
+      all_users: " All Users"
+    new:
+      sign_up: "Sign up"
+      create_my_account: "Create my account"
+  password_resets:
+    new:
+      forgot_password: "Forgot Password"
+      send_email: "Send Email"
+    edit:
+      reset_password: "Reset Password"
+  sessions:
+    new:
+      log_in: "Log in"
+      create_an_acount: "Create an account"
+      remember_me: "Remember me on this computer"
+  static_pages:
+    italian_restaurant: "Italian Restaurant"
+    about:
+      about_us: "About Us"
+      our_story: "Our Story"
+    contact:
+      contact: "Contact"
+      send_us_a_message: "Send us a message"
+      name: "Name"
+      email: "Email"
+      phone: "Phone"
+      messgage: "Massgsge"
+      submit: "Submit"
+      location: "Location"
+      call_us: "Call us"
+      opening_hours: "Opening hours"
+    home:
+      home: "Home"
+      welcome: "Welcome"
+  dishes:
+    edit:
+      change_dish: "Change Dish"
+    new:
+      new_dish: " New Dish"
+      create_dish: " Create Dish"
+    show:
+      comment_here: "Comment here"
+  layouts:
+    footer:
+      contact_us: "Contact Us"
+      address: "8th floor, 379 Hudson St, New York, NY 10018"
+      opening_time: "Opening time"
+      every_day: "Every day"
+      gallery: "Gallery"
+    sidebar:
+      reservation: "Reservation"

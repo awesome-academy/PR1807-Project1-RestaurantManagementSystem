@@ -1,14 +1,14 @@
-<% provide :title, "Log in" %>
+<% provide :title, t(".log_in") %>
 
 <section class="section-contact bg1-pattern p-t-90 p-b-113">
   <div class="container">
     <div class="t-center">
     <span class="tit2 t-center">
-      Pato Restaurant
+      <%= t "users.form.pato_restaurant" %>
     </span>
 
       <h3 class="tit3 t-center m-b-35 m-t-2">
-        Create an account
+        <%= t ".create_an_acount"%>
       </h3>
     </div>
     <div class="col-md-6 col-md-offset-3">
@@ -22,7 +22,7 @@
 
         <%= f.label :remember_me, class: "checkbox inline" do %>
           <%= f.check_box :remember_me %>
-          <span>Remember me on this computer</span>
+          <span class="m-l-15"><%= t ".remember_me" %></span>
         <% end %>
 
         <%= f.submit "Log in", class: "btn btn-primary" %>
