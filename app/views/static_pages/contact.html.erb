@@ -19,41 +19,41 @@
         <div class="col-md-4">
           <!-- Name -->
           <span class="txt9">
-            <%= t ".name" %>
+            <%= t "shared.name" %>
           </span>
           <div class="wrap-inputname size12 bo2 bo-rad-10 m-t-3 m-b-23">
-            <input class="bo-rad-10 sizefull txt10 p-l-20" type="text" name="name" placeholder="Name">
+            <input class="bo-rad-10 sizefull txt10 p-l-20" type="text" name="name" placeholder= <%= t "shared.name" %>>
           </div>
         </div>
 
         <div class="col-md-4">
           <!-- Email -->
           <span class="txt9">
-            <%= t ".email"%>
+            <%= t "shared.email"%>
           </span>
 
           <div class="wrap-inputemail size12 bo2 bo-rad-10 m-t-3 m-b-23">
-            <input class="bo-rad-10 sizefull txt10 p-l-20" type="text" name="email" placeholder="Email">
+            <input class="bo-rad-10 sizefull txt10 p-l-20" type="text" name="email" placeholder=<%= t "shared.email" %>>
           </div>
         </div>
 
         <div class="col-md-4">
           <!-- Phone -->
           <span class="txt9">
-            <%= t ".phone" %>
+            <%= t "shared.phone_number" %>
           </span>
 
           <div class="wrap-inputphone size12 bo2 bo-rad-10 m-t-3 m-b-23">
-            <input class="bo-rad-10 sizefull txt10 p-l-20" type="text" name="phone" placeholder="Phone">
+            <input class="bo-rad-10 sizefull txt10 p-l-20" type="text" name="phone" placeholder=<%= t "shared.phone_number" %>>
           </div>
         </div>
 
         <div class="col-12">
           <!-- Message -->
           <span class="txt9">
-            <%= t ".messgage" %>
+            <%= t ".message" %>
           </span>
-          <textarea class="bo-rad-10 size35 bo2 txt10 p-l-20 p-t-15 m-b-10 m-t-3" name="message" placeholder="Message"></textarea>
+          <textarea class="bo-rad-10 size35 bo2 txt10 p-l-20 p-t-15 m-b-10 m-t-3" name="message" placeholder=<%= t ".message" %>></textarea>
         </div>
       </div>
 
@@ -78,7 +78,7 @@
             </span>
 
             <span class="txt23 size38">
-              8th floor, 379 Hudson St, New York, NY 10018
+              <%= t "shared.restaurant_address" %>
             </span>
           </div>
         </div>

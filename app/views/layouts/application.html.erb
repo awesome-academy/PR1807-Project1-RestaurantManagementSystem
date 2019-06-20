@@ -6,7 +6,7 @@
 
     <%= stylesheet_link_tag    "application", media: "all", "data-turbolinks-track" => "reload" %>
     <%= javascript_include_tag "application", "data-turbolinks-track" => "reload" %>
-
+    <link rel="stylesheet" type="text/css" href="https://fonts.googleapis.com/css?family=Satisfy|Bree+Serif|Candal|PT+Sans">
   </head>
 
   <body>
@@ -14,13 +14,18 @@
     <%= render "layouts/sidebar" %>
 
     <!-- Title Page -->
-    <%= raise_image_title yield(:title) %>
-    <div>
+    <%= content_tag :section,
+        content_tag(:h2, "pato pato", class: "tit6 t-center"),
+        class: "bg-title-page flex-c-m p-t-160 p-b-80 p-l-15 p-r-15",
+        style: "background-image: url(#{image_path "bg-title-page.jpg"});" %>
+
+    <div class="container">
       <% flash.each do |message_type, message| %>
         <%= content_tag :div, message, class: "alert alert-#{message_type}" %>
       <% end %>
       <%= yield %>
     </div>
+
     <%= render "layouts/footer" %>
   </body>
 </html>

@@ -1,13 +1,10 @@
-<div class="col-md-3">
-  <div class="card">
-    <div class="card-img-top">
-      <%= link_to image_tag(dish.image, alt: dish.name, width: "100%",
-          height: "200px", class: "dish-image"), dish %>
-    </div>
-    <div class="card-body">
-      <h5 class="card-title t-center"><%= link_to dish.name, dish %></h5>
-      <p class="card-text"><%= dish.description %></p>
-      <p class="card-text t-center"><%= dish.price %></p>
-    </div>
-  </div>
+<div class="menu-restaurant">
+  <span class="clearfix">
+    <%= link_to dish.name, dish, class: "menu-title" %>
+    <span style="left: 166px; right: 70px;" class="menu-line"></span>
+    <span class="menu-price">$<%= dish.price %></span>
+  </span>
+  <span class="menu-subtitle">
+    <%= dish.description %>
+  </span>
 </div>

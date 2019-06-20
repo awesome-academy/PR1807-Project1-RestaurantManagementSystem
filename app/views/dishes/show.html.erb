@@ -1,35 +1,30 @@
 <% provide :title, @dish.name %>
 
-<div class="row m-t-50 m-b-50 dish-info">
-  <div class="col-md-4 col-md-offset-2">
-    <%= image_tag @dish.image, alt: @dish.name, class: "dish-image", width: "100%" %>
-  </div>
-  <div class="col-md-4">
-    <h3 class="dish-title"><%= @dish.name %></h3>
-    <ul class="rate">
-      <li><%#= rate, **** %>4.8 **** | </li>
-      <li><%#= soluong danh gia %>200 comments | </li>
-      <li><%#= so luong dat mua %>300 users reserved</li>
-    </ul>
-    <p class="dish-price">
-      <%= @dish.price %>
-      <sup><span class="badge badge-secondary">-<%= @dish.promotion %>%</span></sup>
-    </p>
-    <p class="dish-description"><%= @dish.description %></p>
-    <div class="btn-group quantity" role="group">
-      <button type="button" class="btn btn-default" id="dish-quantity-sub" onclick="dish_quantity_sub()">-</button>
-      <button type="button" class="btn btn-default" id="dish-quantity" value="0">0</button>
-      <button type="button" class="btn btn-default" id="dish-quantity-add" onclick="dish_quantity_add()">+</button>
-    </div>
-    <div class="user-actions">
-      <button type="button" class="btn btn-default" id="dish-add-to-favorite">add to favorite</button>
-      <button type="button" class="btn btn-default" id="dish-reserve">reserve now</button>
-    </div>
-  </div>
+<div class="row path">
+  <%= link_to t("shared.home"), root_path %>
+  <span>/</span>
+  <%= link_to t("shared.dish"), dishes_path %>
+  <span>/</span>
+  <%= link_to @dish.name, @dish %>
+  <hr>
 </div>
-
-<div class="row m-t-100 m-b-100 dish-comments">
-  <div class="col-md-8 col-md-offset-2">
-    <%= t ".comment_here" %>
+<div class="row">
+  <div class="dish-description">
+    <div class="row">
+      <%= link_to image_tag(@dish.image, alt: @dish.name, class: "dish-image") %>
+    </div>
+    <div class="row">
+      <h4 class="dish-name">
+        <%= @dish.name %>
+      </h4>
+    </div>
+    <div class="row create-info">
+      <span><%= t ".by_admin" %></span>
+      <span>|</span>
+      <span><%= l(@dish.created_at, format: '%B, %d %Y %H:%M:%S') %></span>
+    </div>
+    <div class="row dish-description">
+      <p><%= @dish.description %></p>
+    </div>
   </div>
 </div>
