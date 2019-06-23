@@ -31,9 +31,44 @@
 
 en:
   hello: "Hello world"
-  users:
+  will_paginate:
+    previous_label: "&#8592; Previous"
+    next_label: "Next &#8594;"
+    page_gap: "&hellip;"
+  shared:
+    save_change: "Save changes"
+    home: "Home"
+    dish: "Dish"
+    create_new_account: "Create new account"
+    pato_restaurant: "Pato Restaurant"
+    italian_restaurant: "italian_restaurant"
+    our_story: "our_story"
+    contact: "Contact"
+    name: "Name"
+    email: "Email"
+    phone_number: "Phone number"
+    restaurant_address: "8th floor, 379 Hudson St, New York, NY 10018"
+  dishes:
+    index:
+      menu_list: "Menu List"
+      title_1: "Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy"
+      title_2: "nibh euismod tincidunt ut laoreet dolore magna aliquam."
+    edit:
+      change_dish: "Change Dish"
+    new:
+      new_dish: " New Dish"
+      create_dish: " Create Dish"
+    show:
+      comment_here: "Comment here"
+      by_admin: "by admin"
     form:
-      pato_restaurant: "Pato Restaurant"
+      food_name: "food name"
+      description: "description"
+      price: "price"
+      promotion: "promotion"
+      display: "display"
+      category_name: "category_name"
+  users:
     edit:
       change_profile: "Change your profile"
       save_change: "Save changes"
@@ -42,6 +77,15 @@ en:
     new:
       sign_up: "Sign up"
       create_my_account: "Create my account"
+    form:
+      password: "Password"
+      password_confirmation: "Password confirmation"
+      address: "Address"
+      gender: "Gender"
+      male: "Male"
+      female: "Female"
+      other: "other"
+      birth_date: "Birth date"
   password_resets:
     new:
       forgot_password: "Forgot Password"
@@ -59,31 +103,18 @@ en:
       about_us: "About Us"
       our_story: "Our Story"
     contact:
-      contact: "Contact"
       send_us_a_message: "Send us a message"
-      name: "Name"
-      email: "Email"
-      phone: "Phone"
-      messgage: "Massgsge"
+      message: "Message"
       submit: "Submit"
       location: "Location"
       call_us: "Call us"
       opening_hours: "Opening hours"
     home:
-      home: "Home"
       welcome: "Welcome"
-  dishes:
-    edit:
-      change_dish: "Change Dish"
-    new:
-      new_dish: " New Dish"
-      create_dish: " Create Dish"
-    show:
-      comment_here: "Comment here"
+
   layouts:
     footer:
       contact_us: "Contact Us"
-      address: "8th floor, 379 Hudson St, New York, NY 10018"
       opening_time: "Opening time"
       every_day: "Every day"
       gallery: "Gallery"

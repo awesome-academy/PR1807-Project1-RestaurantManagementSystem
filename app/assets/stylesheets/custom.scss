@@ -65,12 +65,6 @@ textarea{
   margin-bottom: 15px;
 }
 
-.image-preview{
-  width: 100%;
-  height: auto;
-  border: 1px solid #bbb;
-}
-
 #error_explanation {
   color: red;
   ul {
@@ -148,4 +142,139 @@ textarea{
   .dish-image{
     border-radius: 5%;
   }
+}
+
+//--------------by nvt----------------------------//
+//--------------dish index---------------//
+//--------------dishes-------------------//
+.menu-restaurant .menu-price {
+  font-weight: 600;
+  position: absolute;
+  right: 0;
+  top: 0;
+}
+
+.menu-restaurant .menu-line {
+  position: absolute;
+  bottom: 6px;
+  border-bottom: 1px dotted rgba(0,0,0,.3);
+  margin-left: .6rem;
+  margin-right: .6rem;
+}
+
+.menu-restaurant{
+  width: 50%;
+  float: left;
+  padding: 15px;
+  position: relative;
+}
+
+.menu-restaurant span.clearfix {
+  position: relative;
+  display: block;
+}
+
+.menu-restaurant .menu-title {
+  float: left;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  color: #FFB03B;
+}
+
+.menu-restaurant .menu-subtitle {
+  display: block;
+  float: left;
+  color: #B1B1B1;
+  font-size: 1.2rem;
+}
+
+#menu-flters ul li button.active, #menu-flters ul li button:hover {
+  background: #FFB03B;
+  color: #fff;
+  border: 1px solid #FFB03B;
+}
+#menu-flters ul li {
+  display: inline-block;
+  color: #fff;
+  text-transform: capitalize;
+  letter-spacing: 1px;
+  margin-bottom: 40px;
+}
+#menu-flters ul li button {
+  padding: 10px 20px;
+  font-size: 14px;
+  color: #565656;
+  border-radius: 0px;
+  border: 1px solid #BBBBBB;
+  text-decoration: none;
+  cursor: pointer;
+}
+.header-h {
+  color: #FFB03B;
+  font-size: 46px;
+  font-family: 'Satisfy', sans-serif;
+  font-weight: 300;
+}
+.header-p {
+  color: #9699a6;
+  font-size: 16px;
+}
+.pagination > li > a, .pagination > li > span {
+  position: relative;
+  float: left;
+  padding: 6px 12px;
+  line-height: 1;
+  text-decoration: none;
+  color: #FFB03B;
+  background-color: #fff;
+  margin-left: -1px;
+  border: none;
+}
+.pagination > .active > a, .pagination > .active > a:hover,
+.pagination > .active > a:focus, .pagination > .active > span,
+.pagination > .active > span:hover, .pagination > .active > span:focus {
+  z-index: 3;
+  color: #fff;
+  background-color: #FFB03B;
+  border-color: #FFB03B;
+  border-radius: 3px;
+  cursor: default;
+}
+//------------dish show----------//
+.path{
+  margin: 10px auto;
+}
+
+.dish-image{
+  border-radius: 35px;
+  width: 100%;
+  height: auto;
+}
+.dish-name{
+  font-family: 'Satisfy', sans-serif;
+  color: #FFB03B;
+  font-size: 46px;
+  font-weight: 300;
+  margin: 15px auto;
+}
+.create-info{
+  font-family: 'Satisfy', sans-serif;
+  font-size: 14px;
+  color: #808080;
+  line-height: 1.5;
+}
+.dish-description p{
+  font-size: 15px;
+  margin: 0px;
+  font-family: 'Open Sans', sans-serif;
+}
+
+//-----------dish edit/new----------//
+.image-preview{
+  width: 100%;
+  height: auto;
+  border-radius: 20px;
+}
+form{
+  font-family: 'Open Sans', sans-serif;
 }

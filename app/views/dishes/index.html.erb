@@ -1,24 +1,15 @@
-<div class="row col-md-10 col-md-offset-1 menu-bar p-t-100">
-  <h2 class="m-l-10">menu</h2>
-  <!--<div class="input-group">-->
-  <!--  <input type="text" class="form-control">-->
-  <!--  <span class="input-group-addon glyphicon glyphicon-search"></span>-->
-  <!--  <select name="" id=""></select>-->
-
-  <!--  <div class="input-group">-->
-  <%#= f.label :category %>
-  <%#= f.select :category, @all_categories.collet{|category| category.name}, class: "form-control" %>
-  <!--  </div>-->
-  <!--</div>-->
-<%#= form_for :filter, url:  %>
+<div class="col-md-12 text-center m-b-35 m-t-35">
+  <h1 class="header-h"><%= t ".menu_list" %></h1>
+  <p class="header-p">
+    <%= t ".title_1" %>
+    <br>
+    <%= t ".title_2" %>
+  </p>
 </div>
-<div class="card-group">
-  <div class="row">
-    <div class="col-md-10 col-md-offset-1">
-      <%= render @dishes %>
-    </div>
-  </div>
-  <div class="text-center">
-    <%= will_paginate %>
-  </div>
+
+<div class="row">
+  <%= render @dishes %>
+</div>
+<div class="text-center">
+  <%= will_paginate %>
 </div>

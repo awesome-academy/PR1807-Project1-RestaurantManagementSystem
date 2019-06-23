@@ -1,29 +1,29 @@
 <%= form_for @dish, class: "form-create-dish" do |f| %>
   <%= render "shared/error_messages", object: f.object %>
-  <div class="col-md-4 col-md-offset-2">
+  <div class="col-md-6">
     <div class="field-name">
-      <%= f.label :name %>
-      <%= f.text_field :name, placeholder: "name", class: "form-control" %>
+      <span><%= f.label :name, value: t(".food_name") %></span>
+      <span><%= f.text_field :name, placeholder: t(".food_name"), class: "form-control" %></span>
     </div>
     <div class="field-description">
-      <%= f.label :description %>
-      <%= f.text_area :description, placeholder: "description", class: "form-control" %>
+      <%= f.label :description, value: t(".description") %>
+      <%= f.text_area :description, placeholder: t(".description"), class: "form-control" %>
     </div>
     <div class="field-price">
-      <%= f.label :price %>
-      <%= f.text_field :price, placeholder: "price", class: "form-control" %>
+      <%= f.label :price, value: t(".price") %>
+      <%= f.text_field :price, placeholder: t(".price"), class: "form-control" %>
     </div>
     <div class="field-promotion">
-      <%= f.label :promotion %>
-      <%= f.text_field :promotion, placeholder: "promotion", class: "form-control" %>
+      <%= f.label :promotion, value: t(".promotion") %>
+      <%= f.text_field :promotion, placeholder: t(".promotion"), class: "form-control" %>
     </div>
     <div class="field-category">
-      <%= f.label :category_name %>
+      <%= f.label :category_name, value: t(".category_name") %>
       <%= f.collection_select :category_id, Category.all, :id, :name, class: "form-control" %>
     </div>
     <div class="checkbox-status form-check">
       <%= f.check_box :is_display, class: "form-check-input" %>
-      <%= f.label :is_display, value: "Display", class: "form-check-label" %>
+      <%= f.label :is_display, value: t(".display"), class: "form-check-label" %>
     </div>
 
     <div class="select-image">
@@ -32,7 +32,7 @@
 
     <%= f.submit yield(:button_text), class: "btn btn-primary" %>
   </div>
-  <div class="col-md-4">
+  <div class="col-md-6">
     <%= image_tag @dish.image, alt: @dish.name, class: "visible-false image-preview", id: "img-preview" %>
   </div>
 <% end %>
