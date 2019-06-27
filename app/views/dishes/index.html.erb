@@ -1,15 +1,22 @@
-<div class="col-md-12 text-center m-b-35 m-t-35">
-  <h1 class="header-h"><%= t ".menu_list" %></h1>
-  <p class="header-p">
-    <%= t ".title_1" %>
-    <br>
-    <%= t ".title_2" %>
-  </p>
-</div>
+<% provide :title, t(".menu_list") %>
 
-<div class="row">
-  <%= render @dishes %>
-</div>
-<div class="text-center">
-  <%= will_paginate %>
+<div class="row dishes">
+  <div class="col-md-12 text-center m-b-35 m-t-35">
+    <h1 class="header-h"><%= t ".menu_list" %></h1>
+    <p class="header-p">
+      <%= t ".title_1" %>
+      <br>
+      <%= t ".title_2" %>
+    </p>
+  </div>
+
+  <div class="row text-center" id="menu-flters">
+    <%= render "dishes/filter_form" %>
+  </div>
+  <div class="row dishes-show">
+    <%= render @dishes %>
+  </div>
+  <div class="text-center dishes-paginate">
+    <%= will_paginate @dishes %>
+  </div>
 </div>
