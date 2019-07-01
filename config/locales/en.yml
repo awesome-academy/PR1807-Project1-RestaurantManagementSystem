@@ -53,6 +53,14 @@ en:
       menu_list: "Menu List"
       title_1: "Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy"
       title_2: "nibh euismod tincidunt ut laoreet dolore magna aliquam."
+    filter_form:
+      category: "Category"
+      go: "Go!"
+      search_for: "Search for..."
+      sort: "Sort"
+      low_price: "Low price"
+      hight_price: "Hight price"
+      rate: "rate"
     edit:
       change_dish: "Change Dish"
     new:

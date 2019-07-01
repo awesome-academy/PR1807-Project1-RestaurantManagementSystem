@@ -44,10 +44,6 @@ label{
   margin-top: 15px;
 }
 
-input {
-  height: auto !important;
-}
-
 .checkbox-status input{
   margin: 15px auto;
 }
@@ -106,7 +102,7 @@ textarea{
   }
 }
 
-//---------dish----------//
+//---------search----------//
 
 .card{
   width: 100%;
@@ -145,8 +141,9 @@ textarea{
 }
 
 //--------------by nvt----------------------------//
-//--------------dish index---------------//
+//--------------search index---------------//
 //--------------dishes-------------------//
+//--menu--//
 .menu-restaurant .menu-price {
   font-weight: 600;
   position: absolute;
@@ -187,7 +184,11 @@ textarea{
   color: #B1B1B1;
   font-size: 1.2rem;
 }
+.dishes-show{
+  margin-bottom: 15px;
+}
 
+//--pagination--//
 #menu-flters ul li button.active, #menu-flters ul li button:hover {
   background: #FFB03B;
   color: #fff;
@@ -212,13 +213,14 @@ textarea{
 .header-h {
   color: #FFB03B;
   font-size: 46px;
-  font-family: 'Satisfy', sans-serif;
+  font-family: "Satisfy", sans-serif;
   font-weight: 300;
 }
 .header-p {
   color: #9699a6;
   font-size: 16px;
 }
+
 .pagination > li > a, .pagination > li > span {
   position: relative;
   float: left;
@@ -240,7 +242,7 @@ textarea{
   border-radius: 3px;
   cursor: default;
 }
-//------------dish show----------//
+//------------search show----------//
 .path{
   margin: 10px auto;
 }
@@ -251,14 +253,14 @@ textarea{
   height: auto;
 }
 .dish-name{
-  font-family: 'Satisfy', sans-serif;
+  font-family: "Satisfy", sans-serif;
   color: #FFB03B;
   font-size: 46px;
   font-weight: 300;
   margin: 15px auto;
 }
 .create-info{
-  font-family: 'Satisfy', sans-serif;
+  font-family: "Satisfy", sans-serif;
   font-size: 14px;
   color: #808080;
   line-height: 1.5;
@@ -266,15 +268,19 @@ textarea{
 .dish-description p{
   font-size: 15px;
   margin: 0px;
-  font-family: 'Open Sans', sans-serif;
+  font-family: "Open Sans", sans-serif;
 }
 
-//-----------dish edit/new----------//
+.dishes-show{
+  height: 500px;
+}
+
+//-----------search edit/new----------//
 .image-preview{
   width: 100%;
   height: auto;
   border-radius: 20px;
 }
 form{
-  font-family: 'Open Sans', sans-serif;
+  font-family: "Open Sans", sans-serif;
 }

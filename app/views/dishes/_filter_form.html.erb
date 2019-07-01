@@ -1,0 +1,19 @@
+<%= form_tag dishes_path, method: :get, action: :index, remote: true do %>
+  <div>
+    <div class="col-xs-6 col-sm-2 margin-auto">
+      <%= select_tag :category, options_from_collection_for_select(Category.all, "id", "name"),
+          prompt: t(".category"), class: "form-control" %>
+    </div>
+    <div class="col-xs-6 col-sm-2 margin-auto">
+      <%= select_tag :order_field,
+          options_for_select({t(".sort") => "0", t(".low_price") => :price_asc,
+              t(".hight_price") => :price_desc}), class: "form-control" %>
+    </div>
+    <div class="col-sm-4 input-group input-text">
+      <input type="text" class="form-control" name="search_field" id="search-field" placeholder=<%= t ".search_for" %>>
+      <span class="input-group-btn">
+        <%= submit_tag t(".go"), class: "btn btn-primary" %>
+      </span>
+    </div>
+  </div>
+<% end %>
