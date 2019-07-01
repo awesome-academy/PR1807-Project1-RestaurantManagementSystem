@@ -1,5 +1,2 @@
 $(".dishes-show").html("<%= escape_javascript render @dishes %>")
 $(".dishes-paginate").html("<%= escape_javascript will_paginate @dishes %>")
-if($("#module-field").val() != "") {
-  $("#category-select").val("")
-}

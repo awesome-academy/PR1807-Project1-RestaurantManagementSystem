@@ -4,11 +4,11 @@
 #
 # To use the locales, use `I18n.t`:
 #
-#     I18n.t 'hello'
+#     I18n.t "hello"
 #
 # In views, this is aliased to just `t`:
 #
-#     <%= t('hello') %>
+#     <%= t("hello") %>
 #
 # To use a different locale, set it with `I18n.locale`:
 #
@@ -24,7 +24,7 @@
 # Instead, surround them with single quotes.
 #
 # en:
-#   'true': 'foo'
+#   "true": "foo"
 #
 # To learn more, please read the Rails Internationalization guide
 # available at http://guides.rubyonrails.org/i18n.html.
@@ -35,6 +35,23 @@ en:
     previous_label: "&#8592; Previous"
     next_label: "Next &#8594;"
     page_gap: "&hellip;"
+  date:
+    formats:
+      date_format: "%d-%m-%y"
+  time:
+    formats:
+      short: "%H : %M"
+      long: "%H : %M : %S"
+  reservations:
+    form:
+      add_dish: "Add dish"
+      reservate_now: "Reservate now"
+    edit:
+      edit_reservation: "Edit reservation"
+    index:
+      reservations: "Reservations"
+    new:
+      new_reservation: "New reservation"
   shared:
     save_change: "Save changes"
     home: "Home"
@@ -48,6 +65,23 @@ en:
     email: "Email"
     phone_number: "Phone number"
     restaurant_address: "8th floor, 379 Hudson St, New York, NY 10018"
+    delete: "delete"
+    edit: "edit"
+    are_you_sure: "are you sure?"
+    numbers_people: "Numbers people"
+    quantity: "Quantity"
+    table: "Table"
+    date: "Date"
+    time: "Time"
+    checked: "Checked"
+    is_arrived: "Arrived"
+    list_dish: "List dish"
+    dish_name: "Dish_name"
+    description: "Description"
+    price: "Price"
+    promotion: "Promotion"
+    category_name: "Category name"
+    reservation: "Reservation"
   dishes:
     index:
       menu_list: "Menu List"
@@ -70,12 +104,7 @@ en:
       comment_here: "Comment here"
       by_admin: "by admin"
     form:
-      food_name: "food name"
-      description: "description"
-      price: "price"
-      promotion: "promotion"
       display: "display"
-      category_name: "category_name"
   users:
     edit:
       change_profile: "Change your profile"
@@ -126,5 +155,3 @@ en:
       opening_time: "Opening time"
       every_day: "Every day"
       gallery: "Gallery"
-    sidebar:
-      reservation: "Reservation"
