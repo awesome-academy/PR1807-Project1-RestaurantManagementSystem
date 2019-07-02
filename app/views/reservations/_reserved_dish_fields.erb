@@ -1,0 +1,14 @@
+<fieldset>
+  <div class="col-sm-6">
+    <%= f.select :dish_id, options_from_collection_for_select(Dish.all, :id, :name, f.object.dish_id), {}, class: "form-control" %>
+  </div>
+  <div class="col-sm-3">
+    <%= f.text_field :quantity, class: "form-control", type: "number",
+        placeholder: t("shared.quantity"), min: 1, max: 10,
+        value: f.object.quantity || 1, required: true %>
+  </div>
+  <%= f.hidden_field :_destroy, value: 0 %>
+  <div class="col-sm-2">
+    <%= link_to t("shared.delete"), "#", class: "btn btn-danger remove_fields" %>
+  </div>
+</fieldset>

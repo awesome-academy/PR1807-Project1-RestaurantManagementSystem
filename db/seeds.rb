@@ -58,7 +58,7 @@ Category.create!name: "soft drink", description: "no des", is_display: true, cat
   Dish.create! name: Faker::Lorem.words(2).reduce(:+), description: Faker::Lorem.sentence,
     price: (1..10).to_a.sample * 10_000, promotion: (0..100).to_a.sample,
     is_display: true, category: Category.all.sample,
-    image: File.open("public/uploads/dish/image/#{n+1}/food-#{n+1}.jpg")
+    image: File.open("public/uploads/search/image/#{n+1}/food-#{n+1}.jpg")
 end
 
 20.times do

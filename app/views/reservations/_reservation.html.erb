@@ -1,0 +1,41 @@
+<fieldset class="row show-reservation m-b-50">
+  <legend>
+    <%= t "shared.reservation" %>
+    <%= link_to t("shared.edit"), edit_reservation_path(reservation.id), class: "btn btn-link" %>
+    <%= link_to t("shared.delete"), reservation, action: :destroy, method: :delete,
+        data:{confirm: t("shared.are_you_sure")}, class: "btn btn-link" %>
+  </legend>
+  <%= label_tag "ID" %>
+  <%= label_tag reservation.id %>
+  <br>
+  <%= label_tag t("shared.table") %>
+  <%= label_tag reservation.table_id %>
+  <br>
+  <%= label_tag t("shared.numbers_people") %>
+  <%= label_tag reservation.numbers_people %>
+  <br>
+  <%= label_tag t("shared.date") %>
+  <%= label_tag l(reservation.date_time.to_date, format: :date_format) %>
+  <br>
+  <%= label_tag t("shared.time") %>
+  <%= label_tag l(reservation.date_time.to_time, format: :short) %>
+  <br>
+  <%= label_tag t("shared.checked") %>
+  <%= label_tag reservation.checked ? "yes" : "no" %>
+  <br>
+  <%= label_tag t("shared.is_arrived") %>
+  <%= label_tag reservation.is_arrived ? "yes" : "no" %>
+  <fieldset class="row">
+    <%= label_tag t("shared.list_dish") %>
+    <div class="list-reserved-dish">
+      <label class="lhead"><%= t "shared.dish_name" %></label>
+      <label class="lhead lquantity"><%= t "shared.quantity" %></label>
+      <br>
+      <% reservation.reserved_dishes.each do |reserved_dish| %>
+        <label><%= link_to reserved_dish.dish.name, reserved_dish.dish, target: "blank" %></label>
+        <label class="lquantity"><%= reserved_dish.quantity %></label>
+        <br>
+      <% end %>
+    </div>
+  </fieldset>
+</fieldset>
