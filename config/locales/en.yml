@@ -82,6 +82,11 @@ en:
     promotion: "Promotion"
     category_name: "Category name"
     reservation: "Reservation"
+    reservation_id: "Reservation %{id}"
+  message:
+    create_success: "Create success!"
+    update_success: "Update success!"
+    failure: "Something went wrong. Please try again later!"
   dishes:
     index:
       menu_list: "Menu List"

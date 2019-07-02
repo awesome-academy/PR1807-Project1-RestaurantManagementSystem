@@ -1,0 +1,30 @@
+<%= form_for @reservation do |f| %>
+  <div class="row">
+    <div class="col-sm-6">
+      <div class="input-group date" id="datetimepicker" onclick="picker()">
+        <%= f.text_field :date_time, class: "form-control", required: true,
+            value: Time.zone.now %>
+        <span class="input-group-addon">
+          <span class="glyphicon glyphicon-calendar"></span>
+        </span>
+      </div>
+    </div>
+    <div class="col-sm-6">
+      <%= f.text_field :numbers_people, class: "form-control", type: "number",
+          placeholder: t("shared.numbers_people"), min: 1, max: 10,
+          value: @reservation.numbers_people || 1, required: true %>
+    </div>
+  </div>
+  <div class="row m-t-15">
+    <%= f.fields_for :reserved_dishes do |reserved_dish| %>
+      <% if @reservation.reserved_dishes.count > 0 %>
+        <%= render "reservations/reserved_dish_fields", f: reserved_dish %>
+      <% end %>
+    <% end %>
+    <%= link_to_add_fields t(".add_dish"), f, :reserved_dishes %>
+  </div>
+
+  <div class="row text-center m-t-15">
+    <%= f.submit t(".reservate_now"), class: "btn btn-primary" %>
+  </div>
+<% end %>
