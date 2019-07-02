@@ -29,6 +29,9 @@ gem "hamburgers", "~> 1.1", ">= 1.1.3"
 gem "slick_rails", "~> 1.5", ">= 1.5.9"
 gem "animate-scss", "~> 0.0.5"
 gem "select2-rails", "~> 4.0", ">= 4.0.3"
+gem "momentjs-rails"
+gem "datetime_picker_rails", "~> 0.0.7"
+gem "awesome_print", "~> 1.8", require: "ap"
 
 group :development, :test do
   gem "byebug", platforms: [:mri, :mingw, :x64_mingw]

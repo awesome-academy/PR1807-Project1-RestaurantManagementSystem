@@ -2,23 +2,23 @@
   <%= render "shared/error_messages", object: f.object %>
   <div class="col-md-6">
     <div class="field-name">
-      <span><%= f.label :name, value: t(".food_name") %></span>
-      <span><%= f.text_field :name, placeholder: t(".food_name"), class: "form-control" %></span>
+      <span><%= f.label :name, value: t("shared.dish_name") %></span>
+      <span><%= f.text_field :name, placeholder: t("shared.dish_name"), class: "form-control" %></span>
     </div>
     <div class="field-description">
-      <%= f.label :description, value: t(".description") %>
-      <%= f.text_area :description, placeholder: t(".description"), class: "form-control" %>
+      <%= f.label :description, value: t("shared.description") %>
+      <%= f.text_area :description, placeholder: t("shared.description"), class: "form-control" %>
     </div>
     <div class="field-price">
-      <%= f.label :price, value: t(".price") %>
-      <%= f.text_field :price, placeholder: t(".price"), class: "form-control" %>
+      <%= f.label :price, value: t("shared.price") %>
+      <%= f.text_field :price, placeholder: t("shared.price"), class: "form-control" %>
     </div>
     <div class="field-promotion">
-      <%= f.label :promotion, value: t(".promotion") %>
-      <%= f.text_field :promotion, placeholder: t(".promotion"), class: "form-control" %>
+      <%= f.label :promotion, value: t("shared.promotion") %>
+      <%= f.text_field :promotion, placeholder: t("shared.promotion"), class: "form-control" %>
     </div>
     <div class="field-category">
-      <%= f.label :category_name, value: t(".category_name") %>
+      <%= f.label :category_name, value: t("shared.category_name") %>
       <%= f.collection_select :category_id, Category.all, :id, :name, class: "form-control" %>
     </div>
     <div class="checkbox-status form-check">

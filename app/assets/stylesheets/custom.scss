@@ -8,6 +8,7 @@
 @import "slick-theme";
 @import "select2";
 @import "select2-bootstrap";
+@import "datetime_picker";
 
 /* mixins, variables, etc. */
 
@@ -188,28 +189,6 @@ textarea{
   margin-bottom: 15px;
 }
 
-//--pagination--//
-#menu-flters ul li button.active, #menu-flters ul li button:hover {
-  background: #FFB03B;
-  color: #fff;
-  border: 1px solid #FFB03B;
-}
-#menu-flters ul li {
-  display: inline-block;
-  color: #fff;
-  text-transform: capitalize;
-  letter-spacing: 1px;
-  margin-bottom: 40px;
-}
-#menu-flters ul li button {
-  padding: 10px 20px;
-  font-size: 14px;
-  color: #565656;
-  border-radius: 0px;
-  border: 1px solid #BBBBBB;
-  text-decoration: none;
-  cursor: pointer;
-}
 .header-h {
   color: #FFB03B;
   font-size: 46px;
@@ -221,6 +200,7 @@ textarea{
   font-size: 16px;
 }
 
+//--pagination--//
 .pagination > li > a, .pagination > li > span {
   position: relative;
   float: left;
@@ -283,4 +263,39 @@ textarea{
 }
 form{
   font-family: "Open Sans", sans-serif;
+}
+
+//------------reservation----------//
+//------------show-----------------//
+//-----datetime----//
+.bootstrap-datetimepicker-widget table td.active {
+  background-color: #337ab7!important;
+}
+
+.row{
+  margin: 0;
+}
+.element-reservation{
+  margin-top: 15px;
+}
+.show-reservation{
+  label{
+    width: 200px;
+    display: inline-block;
+    font-weight: normal;
+    margin: 5px;
+  }
+  h3{
+    font-weight: bold;
+  }
+  .list-reserved-dish{
+    margin-left: 50px;
+    .lhead{
+      font-weight: bold;
+    }
+    .lquantity{
+      text-align: center;
+      width: 100px;
+    }
+  }
 }
