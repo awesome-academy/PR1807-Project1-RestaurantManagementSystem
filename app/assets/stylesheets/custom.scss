@@ -37,7 +37,6 @@ $gray-medium-light: #eaeaea;
 text, textarea, select {
   border: solid 1px #bbb;
   width: 100%;
-  margin-bottom: 15px;
   @include box_sizing;
 }
 
@@ -142,6 +141,25 @@ textarea{
 }
 
 //--------------by nvt----------------------------//
+//--------------layout---------------------//
+//--------------header-------------------//
+header{
+  .dropdown{
+    button span{
+      color: white;
+      text-transform: uppercase;
+    }
+    ul{
+      background: none;
+      float: left;
+      padding: 0 10px;
+      color: white;
+      a{
+        color: white;
+      }
+    }
+  }
+}
 //--------------search index---------------//
 //--------------dishes-------------------//
 //--menu--//
@@ -297,5 +315,31 @@ form{
       text-align: center;
       width: 100px;
     }
+  }
+}
+
+//--------------user---------------//
+//--------------show---------------//
+.user-info{
+  display: flex;
+  .info{
+    margin-left: 30px;
+    position: center;
+  }
+  .user-name{
+    font-weight: bold;
+    font-size: large;
+  }
+  a{
+    color: #337ab7;
+    font-family: arial, sans-serif;
+    margin-right: 15px;
+  }
+  label{
+    font-weight: normal;
+    margin: 2px;
+  }
+  .ilabel{
+    width: 200px;
   }
 }

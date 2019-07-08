@@ -83,10 +83,14 @@ en:
     category_name: "Category name"
     reservation: "Reservation"
     reservation_id: "Reservation %{id}"
+    logout: "Logout"
+    profile: "Profile"
   message:
     create_success: "Create success!"
     update_success: "Update success!"
+    deleted_success: "Delete success!"
     failure: "Something went wrong. Please try again later!"
+    check_email: "Please check your email to activate your account."
   dishes:
     index:
       menu_list: "Menu List"
@@ -153,10 +157,12 @@ en:
       opening_hours: "Opening hours"
     home:
       welcome: "Welcome"
-
   layouts:
     footer:
       contact_us: "Contact Us"
       opening_time: "Opening time"
       every_day: "Every day"
       gallery: "Gallery"
+    header:
+      menu: "Menu"
+      about: "About"

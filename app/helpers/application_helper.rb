@@ -1,6 +1,6 @@
 module ApplicationHelper
   def full_title title = ""
-    base_title = "Pato Restaurant"
+    base_title = t "shared.pato_restaurant"
     if title.empty?
       base_title
     else
