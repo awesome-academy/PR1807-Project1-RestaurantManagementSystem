@@ -19,7 +19,10 @@ function picker() {
   });
 }
 function birth_date_picker() {
-  $("#datetimepicker").datetimepicker({
+  $('#datetimepicker').datetimepicker({
     format: 'YYYY-MM-DD'
   });
 }
+$('.alert').ready(function() {
+  $('#flash').fadeOut(5000);
+});

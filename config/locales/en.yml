@@ -58,7 +58,7 @@ en:
     dish: "Dish"
     create_new_account: "Create new account"
     pato_restaurant: "Pato Restaurant"
-    italian_restaurant: "italian_restaurant"
+    italian_restaurant: "Italian Restaurant"
     our_story: "our_story"
     contact: "Contact"
     name: "Name"
@@ -67,7 +67,7 @@ en:
     restaurant_address: "8th floor, 379 Hudson St, New York, NY 10018"
     delete: "delete"
     edit: "edit"
-    are_you_sure: "are you sure?"
+    are_you_sure: "Are you sure?"
     numbers_people: "Numbers people"
     quantity: "Quantity"
     table: "Table"
@@ -82,7 +82,10 @@ en:
     promotion: "Promotion"
     category_name: "Category name"
     reservation: "Reservation"
+    welcome: "Welcome"
     reservation_id: "Reservation %{id}"
+    activated: "activated"
+    not_activated: "not activated"
     logout: "Logout"
     profile: "Profile"
   message:
@@ -91,6 +94,12 @@ en:
     deleted_success: "Delete success!"
     failure: "Something went wrong. Please try again later!"
     check_email: "Please check your email to activate your account."
+    invalid_email_password: "Invalid email/password combination"
+    not_activated: "account is not activated!"
+  admin:
+    users:
+      edit:
+        change_profile_id: "Change profile %{id}"
   dishes:
     index:
       menu_list: "Menu List"
@@ -116,7 +125,7 @@ en:
       display: "display"
   users:
     edit:
-      change_profile: "Change your profile"
+      change_profile: "Change profile"
       save_change: "Save changes"
     index:
       all_users: " All Users"
