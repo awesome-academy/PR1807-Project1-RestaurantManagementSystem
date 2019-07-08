@@ -1,10 +1,36 @@
 <li>
-  <%= gravatar_for user, size: 50 %>
-  <%= link_to user.name, user %>
-  <%# if current_user.admin? && !current_user? user %>
-<!--    | <%#= link_to "delete", user, method: :delete, data: { confirm: "You sure?" } %>-->
-  <%# end %>
-  <%# if !current_user? user %>
-    <%#= render :partial => "follow_form", locals: {user: user} %>
-  <%# end %>
+  <div class="user-info">
+    <div class="avatar">
+      <%= gravatar_for user, size: 150 %>
+    </div>
+    <div class="info">
+      <p>
+        <%= link_to user.name, user, class: "user-name" %>
+        <% if logged_in? && correct_user?(user) %>
+          <%= link_to "edit", edit_user_path(user.id) %>
+          <% if current_user.admin? && !current_user?(user) %>
+            <%= link_to "delete", user, method: :delete, data: { confirm: t("shared.are_you_sure")} %>
+          <% end %>
+        <% end %>
+      </p>
+      <%= label_tag t("shared.email"), nil, class: "ilabel" %>
+      <%= label_tag user.email %><span style="color: #337ab7">(<%= user.activated ? "activated" : "not activated" %>)</span>
+      <br>
+      <%= label_tag t("users.form.gender"), nil, class: "ilabel" %>
+      <%= label_tag user.gender %>
+      <br>
+      <%= label_tag t("users.form.birth_date"), nil, class: "ilabel" %>
+      <%= label_tag user.birth_date %>
+      <br>
+      <%= label_tag t("shared.phone_number"), nil, class: "ilabel" %>
+      <%= label_tag user.phone_number %>
+      <br>
+      <%= label_tag t("users.form.address"), nil, class: "ilabel" %>
+      <%= label_tag user.address %>
+      <br>
+      <%= label_tag t("shared.reservation"), nil, class: "ilabel" %>
+      <%= label_tag user.reservations.count %>
+      <br>
+    </div>
+  </div>
 </li>

@@ -14,35 +14,38 @@
       <div class="row">
         <div class="col-md-4">
           <%= f.label :name, value: t("shared.name") %>
-          <%= f.text_field :name, class: "form-control", placeholder: t("shared.name"), value: "nastx" %>
+          <%= f.text_field :name, class: "form-control", placeholder: t("shared.name") %>
 
           <%= f.label :email, value: t("shared.email") %>
-          <%= f.text_field :email, class: "form-control", placeholder: t("shared.email"), value: "nvt94.ptit@gmail.com" %>
+          <%= f.text_field :email, class: "form-control", placeholder: t("shared.email") %>
 
           <%= f.label :password, value: t(".password") %>
-          <%= f.password_field :password, class: "form-control", placeholder: t(".password"), value: "xxxxxx" %>
+          <%= f.password_field :password, class: "form-control", placeholder: t(".password") %>
 
           <%= f.label :password_confirmation, value: t(".password_confirmation") %>
-          <%= f.password_field :password_confirmation, class: "form-control", placeholder: t(".password_confirmation"), value: "xxxxxx" %>
+          <%= f.password_field :password_confirmation, class: "form-control", placeholder: t(".password_confirmation") %>
 
           <!-- button submit -->
-          <%= f.submit yield(:button_text), class: "btn btn-primary" %>
+          <%= f.submit yield(:button_text), class: "btn btn-primary m-t-15" %>
         </div>
 
         <div class="col-md-4">
           <%= f.label :phone_number, value: t("shared.phone_number") %>
-          <%= f.text_field :phone_number, class: "form-control", placeholder: t("shared.phone_number"), value: "0987654321" %>
+          <%= f.text_field :phone_number, class: "form-control", placeholder: t("shared.phone_number") %>
 
           <%= f.label :address, value: t(".address") %>
-          <%= f.text_field :address, class: "form-control", placeholder: t(".address"), value: "ha noi city" %>
+          <%= f.text_field :address, class: "form-control", placeholder: t(".address") %>
 
           <%= f.label :gender, value: t(".gender") %>
-          <%= f.select :gender, [t(".male"), t(".female"), t(".other")], class: "form-control" %>
+          <%= f.select :gender, {t(".male") => "male", t(".female") => "female", t(".other") => "other"}, {}, {class: "form-control"} %>
 
           <%= f.label :birth_date, value: t(".birth_date") %>
-          <div class="wrap-inputdate pos-relative">
-            <%= f.text_field :birth_date, class: "form-control", placeholder: t(".birth_date"), value: "17/05/1994" %>
-            <i class="btn-calendar fa fa-calendar ab-r-m hov-pointer m-r-18" aria-hidden="true"></i>
+          <div class="input-group date" id="datetimepicker" onclick="birth_date_picker()">
+            <%= f.text_field :birth_date, class: "form-control", required: true,
+                value: Date.today %>
+            <span class="input-group-addon">
+              <span class="glyphicon glyphicon-calendar"></span>
+            </span>
           </div>
         </div>
       </div>
