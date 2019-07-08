@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title><%= full_title yield(:title) %></title>
+  <%= csrf_meta_tags %>
+
+  <%= stylesheet_link_tag    "application", media: "all", "data-turbolinks-track" => "reload" %>
+  <%= javascript_include_tag "application", "data-turbolinks-track" => "reload" %>
+</head>
+
+<body>
+  <%= render "layouts/admin_header" %>
+  <div class="row">
+    <%= render "layouts/admin_sidebar" %>
+    <div class="col-md-10 content">
+      <% flash.each do |message_type, message| %>
+        <%= content_tag :div, message, class: "alert alert-#{message_type}", id: "flash" %>
+      <% end %>
+      <div class="panel panel-default">
+        <div class="panel-heading">
+          <%= yield :title %>
+        </div>
+        <div class="panel-body" id="content" >
+          <%= yield %>
+        </div>
+      </div>
+    </div>
+  </div>
+</body>
+</html>
