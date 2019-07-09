@@ -1,6 +1,6 @@
-class DishesController < ApplicationController
+class Admin::DishesController < ApplicationController
   require "will_paginate/array"
-
+  layout "admin"
   def new
     @dish = Dish.new
   end
@@ -9,7 +9,7 @@ class DishesController < ApplicationController
     @dish = Dish.new dish_params
     if @dish.save
       flash[:info] = t "message.create_success"
-      redirect_to @dish
+      redirect_to admin_dish_url(@dish.id)
     else
       flash[:danger] = t "message.failure"
       render "new"
@@ -24,7 +24,7 @@ class DishesController < ApplicationController
     @dish = Dish.find params[:id]
     if @dish.update_attributes dish_params
       flash[:success] = t "message.update_success"
-      redirect_to @dish
+      redirect_to admin_dish_url(@dish.id)
     else
       flash[:danger] = t "message.failure"
       render "edit"

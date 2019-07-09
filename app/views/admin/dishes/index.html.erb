@@ -1,20 +1,20 @@
-<% provide :title, t(".menu_list") %>
+<% provide :title, t("dishes.index.menu_list") %>
 
 <div class="row dishes">
   <div class="col-md-12 text-center m-b-35 m-t-35">
-    <h1 class="header-h"><%= t ".menu_list" %></h1>
+    <h1 class="header-h"><%= t "dishes.index.menu_list" %></h1>
     <p class="header-p">
-      <%= t ".title_1" %>
+      <%= t "dishes.index.title_1" %>
       <br>
-      <%= t ".title_2" %>
+      <%= t "dishes.index.title_2" %>
     </p>
   </div>
 
   <div class="row text-center" id="menu-flters">
-    <%= render "filter_form", admin: false %>
+    <%= render "dishes/filter_form", admin: true %>
   </div>
   <div class="row dishes-show">
-    <%= render @dishes, admin: false %>
+    <%= render @dishes %>
   </div>
   <div class="text-center dishes-paginate">
     <%= will_paginate @dishes %>

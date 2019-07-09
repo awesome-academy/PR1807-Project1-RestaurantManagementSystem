@@ -1,6 +1,6 @@
 <div class="menu-restaurant">
   <span class="clearfix">
-    <%= link_to dish.name, dish, class: "menu-title" %>
+    <%= link_to dish.name, admin ? admin_dish_path(dish.id) : dish, class: "menu-title" %>
     <span style="left: 166px; right: 70px;" class="menu-line"></span>
     <span class="menu-price">$<%= dish.price %></span>
   </span>
