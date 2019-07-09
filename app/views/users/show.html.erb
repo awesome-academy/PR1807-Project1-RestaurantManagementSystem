@@ -1,9 +1,9 @@
 <% provide :title, @user.name %>
 <div class="row">
   <ul>
-    <%= render @user %>
+    <%= render @user, admin: false %>
   </ul>
   <div class="reservations m-t-50">
-    <%= render @user.reservations %>
+    <%= render @user.reservations, admin: false %>
   </div>
 </div>

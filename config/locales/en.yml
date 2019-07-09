@@ -88,6 +88,9 @@ en:
     not_activated: "not activated"
     logout: "Logout"
     profile: "Profile"
+    administrator: "Administrator"
+    please_log_in: "Please log in."
+    user: "User"
   message:
     create_success: "Create success!"
     update_success: "Update success!"
@@ -175,3 +178,9 @@ en:
     header:
       menu: "Menu"
       about: "About"
+    admin_header:
+      visit_site: "Visit site"
+      account: "Account"
+      settings: "Settings"
+    admin_sidebar:
+      dashboard: "Dashboard"

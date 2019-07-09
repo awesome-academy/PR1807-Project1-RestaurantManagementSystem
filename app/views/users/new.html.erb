@@ -1,4 +1,18 @@
 <% provide :title, t(".sign_up") %>
 <% provide :button_text, t(".create_my_account") %>
 
-<%= render "users/form" %>
+<section class="section-contact bg1-pattern p-t-90 p-b-113">
+  <div class="container">
+    <div class="t-center">
+      <span class="tit2 t-center">
+        <%= t "shared.pato_restaurant" %>
+      </span>
+
+      <h3 class="tit3 t-center m-b-35 m-t-2">
+        <%= t "shared.create_new_account" %>
+      </h3>
+    </div>
+
+    <%= render "form", controller: "users", action: "create" %>
+  </div>
+</section>
