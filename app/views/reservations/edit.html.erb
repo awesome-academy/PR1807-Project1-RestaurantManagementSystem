@@ -2,5 +2,5 @@
 
 <h1 class="header-h text-center m-b-50"><%= t ".edit_reservation" %></h1>
 <div class="row">
-  <%= render "reservations/form" %>
+  <%= render "form", controller: "reservations",  action: "update" %>
 </div>
