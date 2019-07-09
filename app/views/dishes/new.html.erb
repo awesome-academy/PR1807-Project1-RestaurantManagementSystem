@@ -2,5 +2,5 @@
 <% provide :button_text, t(".create_dish") %>
 
 <div class="new-dish row m-t-50 m-b-50">
-  <%= render "dishes/form" %>
+  <%= render "dishes/form", controller: "dishes", action: "create" %>
 </div>

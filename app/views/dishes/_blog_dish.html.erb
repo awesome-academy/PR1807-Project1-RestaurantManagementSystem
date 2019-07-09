@@ -1,0 +1,28 @@
+<div class="row path">
+  <%= link_to t("shared.home"), root_path %>
+  <span>/</span>
+  <%= link_to t("shared.dish"), dishes_path %>
+  <span>/</span>
+  <%= link_to @dish.name, @dish %>
+  <hr>
+</div>
+<div class="row">
+  <div class="dish-description">
+    <div class="row">
+      <%= link_to image_tag(@dish.image, alt: @dish.name, class: "dish-image") %>
+    </div>
+    <div class="row">
+      <h4 class="dish-name">
+        <%= @dish.name %>
+      </h4>
+    </div>
+    <div class="row create-info">
+      <span><%= t ".by_admin" %></span>
+      <span>|</span>
+      <span><%= l(@dish.created_at, format: '%B, %d %Y %H:%M:%S') %></span>
+    </div>
+    <div class="row dish-description">
+      <p><%= @dish.description %></p>
+    </div>
+  </div>
+</div>

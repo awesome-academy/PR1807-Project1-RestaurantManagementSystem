@@ -1,4 +1,4 @@
-<%= form_for @dish, class: "form-create-search" do |f| %>
+<%= form_for @dish, url: {controller: controller, action: action}, class: "form-create-dish" do |f| %>
   <%= render "shared/error_messages", object: f.object %>
   <div class="col-md-6">
     <div class="field-name">

@@ -1,4 +1,4 @@
-<%= form_tag dishes_path, method: :get, action: :index, remote: true do %>
+<%= form_tag admin ? admin_dishes_path : dishes_path, method: :get, action: :index, remote: true do %>
   <div>
     <div class="col-xs-6 col-sm-2 margin-auto">
       <%= select_tag :category, options_from_collection_for_select(Category.all, "id", "name"),

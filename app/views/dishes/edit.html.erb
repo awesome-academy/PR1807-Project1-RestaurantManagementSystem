@@ -1,5 +1,5 @@
 <% provide :title, t(".change_dish") %>
 <% provide :button_text, t("shared.save_change") %>
 <div class="new-dish row m-t-50 m-b-50">
-  <%= render "dishes/form" %>
+  <%= render "form", controller: "dishes", action: "update" %>
 </div>

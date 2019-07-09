@@ -11,10 +11,10 @@
   </div>
 
   <div class="row text-center" id="menu-flters">
-    <%= render "dishes/filter_form" %>
+    <%= render "filter_form", admin: false %>
   </div>
   <div class="row dishes-show">
-    <%= render @dishes %>
+    <%= render @dishes, admin: false %>
   </div>
   <div class="text-center dishes-paginate">
     <%= will_paginate @dishes %>

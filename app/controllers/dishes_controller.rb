@@ -1,6 +1,6 @@
 class DishesController < ApplicationController
   require "will_paginate/array"
-  @dishes
+
   def new
     @dish = Dish.new
   end
@@ -8,9 +8,10 @@ class DishesController < ApplicationController
   def create
     @dish = Dish.new dish_params
     if @dish.save
-      flash[:info] = "create new search successul"
+      flash[:info] = t "message.create_success"
       redirect_to @dish
     else
+      flash[:danger] = t "message.failure"
       render "new"
     end
   end
@@ -22,9 +23,10 @@ class DishesController < ApplicationController
   def update
     @dish = Dish.find params[:id]
     if @dish.update_attributes dish_params
-      flash[:success] = "update success"
+      flash[:success] = t "message.update_success"
       redirect_to @dish
     else
+      flash[:danger] = t "message.failure"
       render "edit"
     end
   end
@@ -46,7 +48,7 @@ class DishesController < ApplicationController
   private
 
   def dish_params
-    params.require(:search).permit :name, :image, :description, :status,
+    params.require(:dish).permit :name, :image, :description, :status,
       :promotion, :price, :category_id
   end
 
@@ -54,7 +56,7 @@ class DishesController < ApplicationController
     case order_key
     when :price_asc #low to high price
       dishes.order :price
-    when :price_desc  #high to low price
+    when :price_desc #high to low price
       dishes.order price: :desc
     else
       dishes
