@@ -43,7 +43,7 @@ class UsersController < ApplicationController
   def destroy
     User.find(params[:id]).destroy
     flash[:success] = t "message.deleted_success"
-    redirect_back_or users_url
+    redirect_to root_url
   end
 
   private

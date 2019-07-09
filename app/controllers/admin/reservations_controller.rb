@@ -9,32 +9,34 @@ class Admin::ReservationsController < ApplicationController
     @reservation = Reservation.find params[:id]
   end
 
-  def edit
-    @reservation = Reservation.find params[:id]
-    return if @reservation
+  def new
     @reservation = Reservation.new
     @reservation.reserved_dishes.build
   end
 
+  def create
+    @reservation = current_user.reservations.build reservation_params
+    if @reservation.save
+      flash[:success] = t "message.create_success"
+      redirect_to admin_reservation_url(@reservation.id)
+    else
+      flash[:danger] = t "message.failure"
+      render "new"
+    end
+  end
+
+  def edit
+    @reservation = Reservation.find params[:id]
+  end
+
   def update
     @reservation = Reservation.find params[:id]
-    if @reservation
-      if @reservation.update_attributes reservation_params
-        flash[:success] = t "message.update_success"
-        redirect_to @reservation
-      else
-        flash[:danger] = t "message.failure"
-        render "edit"
-      end
+    if @reservation.update_attributes reservation_params
+      flash[:success] = t "message.update_success"
+      redirect_to admin_reservation_path(@reservation.id)
     else
-      @reservation = current_user.reservations.build reservation_params
-      if @reservation.save
-        flash[:success] = t "message.create_success"
-        redirect_to admin_reservation_url(@reservation.id)
-      else
-        flash[:danger] = t "message.failure"
-        render "edit"
-      end
+      flash[:danger] = t "message.failure"
+      render "edit"
     end
   end
 
