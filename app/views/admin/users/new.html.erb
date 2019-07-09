@@ -1,5 +1,5 @@
-<% provide :title, t(".change_profile_id", id: @user.id) %>
-<% provide :button_text, t("users.edit.save_change") %>
+<% provide :title, t("shared.create_new_account") %>
+<% provide :button_text, t("shared.create_new_account") %>
 
 <section class="section-contact bg1-pattern p-t-90 p-b-113">
   <div class="container">
@@ -9,9 +9,10 @@
       </span>
 
       <h3 class="tit3 t-center m-b-35 m-t-2">
-        <%= t "users.edit.change_profile" %>
+        <%= t "shared.create_new_account" %>
       </h3>
     </div>
-    <%= render "form", action: "update" %>
+
+    <%= render "form", action: "create" %>
   </div>
 </section>

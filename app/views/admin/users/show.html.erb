@@ -1,0 +1,9 @@
+<% provide :title, @user.name %>
+<div class="row">
+  <ul>
+    <%= render @user %>
+  </ul>
+  <div class="reservations m-t-50">
+    <%= render @user.reservations %>
+  </div>
+</div>
