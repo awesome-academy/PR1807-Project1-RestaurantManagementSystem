@@ -1,7 +1,6 @@
 class ApplicationController < ActionController::Base
   protect_from_forgery with: :exception
   include SessionsHelper
-  include DishesHelper
   include UsersHelper
 
   private
@@ -9,7 +8,7 @@ class ApplicationController < ActionController::Base
   def logged_in_user
     unless logged_in?
       store_location
-      flash[:danger] = "Please log in."
+      flash[:danger] = t "shared.please_log_in"
       redirect_to login_url
     end
   end

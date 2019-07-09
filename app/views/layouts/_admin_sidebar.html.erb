@@ -1,27 +1,25 @@
-<div class="col-md-2">
+<div class="col-md-2 col-sx-4">
   <!-- Menu -->
-  <%= form_for :admin, action: :index, method: :get do |f| %>
-    <div class="side-menu">
-      <div class="side-menu-container">
+  <div class="side-menu">
+    <div class="side-menu-container">
+      <%= form_for :admin, action: :index, method: :get do |f| %>
         <ul class="nav navbar-nav">
-
           <li class="active">
-            <%= link_to admin_users_path do %>
-              <span class="glyphicon glyphicon-dashboard"></span> Dashboard
-            <% end %>
+            <%= link_to t(".dashboard"), admin_users_path %>
           </li>
           <!-- Dropdown user-->
           <li class="panel panel-default" id="dropdown">
             <a data-toggle="collapse" href="#dropdown-user">
-              <span class="glyphicon glyphicon-user"></span> User <span class="caret"></span>
+              <span class="glyphicon glyphicon-user"></span> <%= t "shared.user" %>
+              <span class="caret"></span>
             </a>
 
             <!-- Dropdown level 1 -->
             <div id="dropdown-user" class="panel-collapse collapse">
               <div class="panel-body">
                 <ul class="nav navbar-nav">
-                  <li><%= link_to "users", admin_users_path %></li>
-                  <li><%= link_to "new user", new_admin_user_path %></li>
+                  <li><%= link_to t("users.index.all_users"), admin_users_path %></li>
+                  <li><%= link_to t("shared.create_new_account"), new_admin_user_path %></li>
                 </ul>
               </div>
             </div>
@@ -29,21 +27,22 @@
           <!-- Dropdown reservation-->
           <li class="panel panel-default" id="dropdown">
             <a data-toggle="collapse" href="#dropdown-reservation">
-              <span class="glyphicon glyphicon-user"></span> Reservation <span class="caret"></span>
+              <span class="glyphicon glyphicon-user"></span> <%= t "shared.reservation" %>
+              <span class="caret"></span>
             </a>
 
             <!-- Dropdown level 1 -->
             <div id="dropdown-reservation" class="panel-collapse collapse">
               <div class="panel-body">
                 <ul class="nav navbar-nav">
-                  <li><%= link_to "reservations", admin_reservations_path %></li>
-                  <li><%= link_to "new reservation", new_admin_reservation_path %></li>
+                  <li><%= link_to t("reservations.index.reservations"), admin_reservations_path %></li>
+                  <li><%= link_to t("reservations.new.new_reservation"), new_admin_reservation_path %></li>
                 </ul>
               </div>
             </div>
           </li>
         </ul>
-      </div><!-- /.navbar-collapse -->
-  <% end %>
+      <% end %>
+    </div><!-- /.navbar-collapse -->
   </div>
 </div>
